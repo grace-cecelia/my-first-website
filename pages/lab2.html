@@ -1,22 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 2</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-<header>
-    <nav>
-        <div class="logo">
-            <h1>My DevDiaries</h1>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Dev Diaries</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lab-header">
+            <h1>Lab 2</h1>
+            <p class="lab-date">January 15, 2026</p>
+        </section>
+
+        <section class="lab-content">
+            <h2 style="padding: 20px;">What I Learned</h2>
+
+            <div class="learning-section">
+                <h3>Coding Basics</h3>
+                <ul>
+                    <p>1. When creating multiple pages, use of inline CSS can help keeping the number of CSS classes to
+                        a minimum by modifying specific HTML items.
+                        <br></br>
+                        2. Website layout can be accomplished with a mix of flexbox and grid.
+                        <br></br>
+                        3. CSS classes can be used to modify multiple elements on a page, while CSS elements should only
+                        be used once.
+                        <br></br>
+                        4. The div tag is an organizational tool that allows you to structure HTML content into
+                        containers.
+                    </p>
+                </ul>
+            </div>
+
+            <div class="learning-section">
+                <h3>Responsive Design</h3>
+                <p>1. F12 navigates to the DevTools page, which can be used to view the site on different screen sizes.
+                    <br></br>
+                    2. Responsive design varies not only between devices but also between browsers, requiring testing to
+                    be done on multiple browsers.
+                    <br></br>
+                    3. The @media query applies styles only on devices with a defined range of screen sizes.
+                    <br></br>
+                </p>
+            </div>
+
+            <div class="learning-section">
+                <h3>HTML/CSS techniques</h3>
+                <p>1. Drop shadow: implemented on lab 2 images.
+                    <br></br>
+                    2. Replacing header text with an image: to be used to put the header text in my handwriting.
+                    <br></br>
+                    3. Replacing an underline border with an image: to be used to make the underline in the navigation
+                    menu appear handwritten.
+                    <br></br>
+                </p>
+            </div>
+        </section>
+
+        <section class="lab-images">
+            <h2 style="padding: 20px;">Project Screenshots</h2>
+
+            <div class="screenshot-grid">
+                <figure>
+                    <lab2-image1><img src="../images/lab2/lab2-nav.png"
+                            alt="website homepage showing navigation, title, and gallery items"
+                            width="800px"></lab2-image1>
+                    <figcaption>Navigation bar with hover effects</figcaption>
+                </figure>
+
+                <figure>
+                    <lab2-image2><img src="../images/lab2/lab2-gallery.png"
+                            alt="grid of clickable items showing different web dev projects"
+                            width="800px"></lab2-image2>
+                    <figcaption>Responsive gallery layout using CSS Grid</figcaption>
+                </figure>
+
+                <figure>
+                    <lab2-image3><img src="../images/lab2/lab2-footer.png" alt="footer of website"
+                            width="800px"></lab2-image3>
+                    <figcaption>Consistent footer across all pages</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="lab-reflection">
+            <h2>Reflection</h2>
+            <p>This lab showed me the importance of organization and structure when writing code. While it may seem
+                daunting to create a website, I found that the interplay between HTML and CSS elements made it easy to
+                define elements in a particular way, then apply styles conditionally. It followed the logical structure
+                that if I implemented tags correctly in HTML, I could then implement classes and IDs correctly within
+                CSS. Because many of the skills in this area are widely useful, I found these techniques becoming more
+                intuitive as I applied them elsewhere on the site.
+                <br><br>
+                I was also able to use some CSS techniques I picked up last week and through my own curiosity to
+                accomplish tasks beyond the lab activities. These were relatively simple, such as adjusting the padding
+                by sections and elements, but it was nice to figure out small design challenges as I build up to coding
+                my MRP. As I worked on the lab and thought about the ways I want my site to differ from the code in the
+                lab, I looked up a number of tutorials for changes I still wish to make to the site. Having done this
+                lab, I feel capable of following more tutorials and further customizing the site to my liking.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>My Dev Diaries</h3>
+                <h4>Documenting my journey in web development</h4>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <h4>Email: gracegibsonart@gmail.com</h4>
+                <h4>Website: gracecgibson.com</h4>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-        </ul>
-    </nav>
-</header>    
+
+        <div class="footer-bottom">
+            <h4 style="font-size: 15px;">&copy; 2026 Grace Gibson. All rights reserved.</h4>
+        </div>
+    </footer>
 </body>
+
 </html>

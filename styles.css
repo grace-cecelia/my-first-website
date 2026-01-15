@@ -12,10 +12,6 @@ h1 {
         "wdth" 100;
 }
 
-h1:hover {
-    color: rgb(113, 84, 123)
-}
-
 
 h2 {
     color: rgb(42, 28, 47);
@@ -28,10 +24,6 @@ h2 {
 
 }
 
-h2:hover {
-    color: rgb(123, 84, 84);
-}
-
 h3 {
     color: rgb(42, 28, 47);
     font-size: 30px;
@@ -40,10 +32,6 @@ h3 {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-}
-
-h3:hover {
-    color: rgb(123, 109, 84)
 }
 
 h4 {
@@ -65,21 +53,6 @@ p {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-}
-
-p:hover {
-    color: rgb(84, 123, 118);
-}
-
-img {
-    border-radius: 20px;
-    border: 10px solid white;
-}
-
-img:hover {
-    transform: translateY(-5px) translateX(-5px) !important;
-    transition: 0.5s !important;
-    filter: drop-shadow(8px 8px 4px rgb(214, 177, 183));
 }
 
 /* unvisited link */
@@ -160,8 +133,8 @@ nav {
 
 /* Hover Effects for Navigation Links */
 .nav-links a:hover {
-    color: #f3a9f3;
-    border-bottom: 3px solid #f3a9f3;
+    color: #d5bee0;
+    border-bottom: 3px solid #d5bee0;
 }
 
 /* Active/Current Page Styling */
@@ -319,4 +292,220 @@ main {
     margin: 0 auto;
     padding: 2rem;
     width: 100%;
+}
+
+/* Gallery Section */
+.gallery {
+    margin-top: 4rem;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* CSS Grid Layout - 2 Column Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(150deg, rgb(153, 177, 174) 0%, rgb(153, 177, 174) 30%, rgb(175, 156, 182) 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ecf0f1;
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Lab Page Styling */
+.lab-header {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(150deg, rgb(153, 177, 174) 0%, rgb(153, 177, 174) 30%, rgb(175, 156, 182) 100%);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.lab-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.lab-date {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    font-style: italic;
+}
+
+.lab-content {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.learning-section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.learning-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}
+
+.learning-section ul {
+    margin-left: 2rem;
+    line-height: 1.8;
+}
+
+.learning-section p {
+    font-size: 15px;
+    text-align: left;
+}
+
+.learning-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Reflection Section */
+.lab-reflection {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lab-reflection h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.lab-reflection p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+    text-align: left;
+    font-size: 15px;
+}
+
+.lab-reflection p:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    border: 1px solid #2c3e50;
+}
+
+figcaption {
+    padding-bottom: 30px;
+    padding-top: 5px;
+}
+
+lab2-image1 {
+    filter: drop-shadow(3px 3px 5px #cec9d1);
+    width: 800px;
+}
+
+lab2-image2 {
+    filter: drop-shadow(3px 3px 5px #cec9d1);
+    width: 800px;
+}
+
+lab2-image3 {
+    filter: drop-shadow(3px 3px 5px #cec9d1);
+    width: 800px;
 }
