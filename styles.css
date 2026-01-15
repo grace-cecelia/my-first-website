@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(252, 223, 228);
+    background-color: rgb(244, 239, 245);
 }
 
 h1 {
@@ -46,6 +46,17 @@ h3:hover {
     color: rgb(123, 109, 84)
 }
 
+h4 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+}
+
 p {
     color: rgb(42, 28, 47);
     font-size: 20px;
@@ -68,7 +79,7 @@ img {
 img:hover {
     transform: translateY(-5px) translateX(-5px) !important;
     transition: 0.5s !important;
-    filter: drop-shadow(8px 8px 4px rgb(214, 177, 183) );
+    filter: drop-shadow(8px 8px 4px rgb(214, 177, 183));
 }
 
 /* unvisited link */
@@ -99,4 +110,213 @@ a:hover {
 
 .grow:hover {
     transform: scale(1.1);
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo h1 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects for Navigation Links */
+.nav-links a:hover {
+    color: #f3a9f3;
+    border-bottom: 3px solid #f3a9f3;
+}
+
+/* Active/Current Page Styling */
+.nav-links a.active {
+    color: #d5bee0;
+    border-bottom: 3px solid #d5bee0;
+    font-weight: 600;
+}
+
+/* Enhanced Header Styling */
+header {
+    background: linear-gradient(135deg, rgb(84, 123, 118) 0%, rgb(113, 84, 123) 100%);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve spacing and readability */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* On smaller screens, reduce gap */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(84, 123, 118);
+    color: #ecf0f1;
+    padding: 3rem 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(236, 240, 241, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 400px);
+    text-align: center;
+}
+
+/* Ensures content doesn't touch edges on small screens */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        padding: 2rem 1rem 1rem;
+    }
+}
+
+/* Body and HTML Setup */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main content grow to push footer down */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
 }
