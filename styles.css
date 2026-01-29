@@ -127,20 +127,17 @@ nav {
     text-decoration: none;
     font-size: 1.1rem;
     padding-bottom: 0.7rem;
-    border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
 }
 
 /* Hover Effects for Navigation Links */
 .nav-links a:hover {
     color: #d5bee0;
-    border-bottom: 3px solid #d5bee0;
 }
 
 /* Active/Current Page Styling */
 .nav-links a.active {
     color: #d5bee0;
-    border-bottom: 3px solid #d5bee0;
     font-weight: 600;
 }
 
