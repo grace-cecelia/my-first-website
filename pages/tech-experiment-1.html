@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Dev Diaries</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lab-header">
+            <h1>Tech Experiment: Interactive Design</h1>
+            <p class="lab-date">February 4, 2026</p>
+        </section>
+
+        <section class="lab-content">
+            <h2 style="padding: 20px;">Experiment Goals</h2>
+
+            <div class="learning-section">
+                <ul>
+                    <p>1. Build a few simple interactive items in HTML, CSS, and JS as preparation for both my MRP and
+                        interactive project.
+                        <br></br>
+                        2. Learn to code a toggle that shows and hides labels on a click, a dark mode toggle, and a blur
+                        filter button.
+                        <br></br>
+                        3. Explore common development skills needed for interactive design for the web.
+                    </p>
+                </ul>
+            </div>
+
+            <h2 style="padding: 20px;">Part 1: Toggle for Labels</h2>
+
+            <div class="learning-section">
+                <p>One element of my MRP is a build-your-own-surgery tool that uses a toggle switch to show and hide
+                    labels according to the user's preferences. This experiment involves creating a similar
+                    switch to later implement in the final product.
+                    <br></br>
+                    insert image of prototype switch here
+                    <br></br>
+                    I used code from W3 Tutorials to create a simple toggle switch, then added text based on code
+                    recommended on Stack Overflow. I adjusted CSS elements to produce the appearance I wanted.
+                </p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <br></br>
+
+            <div class="learning-section">
+                <p>I then brought in a sample image to be labeled for the purpose of this experiment. I used a W3
+                    tutorial to create a label on the image with HTML and CSS, then I further stylized the text using
+                    CSS.
+                    <br></br>
+                    I then decided to experiment with SVGs as a backing box to the label, so I used HTML to create
+                    an SVG rectangle and adjusted the parameters. I then used an image overlay to place the SVG
+                    rectangle on top of the image and adjusted the positioning to match that of the label text. (Note
+                    for future use: figuring out a way to group the box and label text will streamline this process.)
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="img-overlay-wrap">
+
+                    <img src="../images/limbicStructures_001.png"
+                        alt="isolated structures within the limbic lobe of the brain - hippocampus, amygdala, corpus callosum, fornix, and cingulate gyrus"
+                        style="width: 400px;">
+                    <br></br>
+                    <div id="hippocamp"> <svg xmlns="http://www.w3.org/2000/svg">
+                            <rect width="120" height="35" x="10" y="10" rx="10" ry="10" fill="white" stroke="black" />
+                        </svg>
+                        <div class="bottom-left">Hippocampus</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <p>The next job was to connect the label appearing and disappearing with the toggle.
+                    <br></br>
+                    I brought in code from W3 that used HTML and JS to hide and show an element with a button. I
+                    experimented with adding this code to the items I had created. I wasn't able to immediately connect
+                    the label with the toggle, but I implemented JS to connect the hide/show function to the button code
+                    provided by W3.
+                    <br></br>
+                    I had some trouble getting this to work properly, as I couldn't figure out how to connect the button function to an item that wasn't a button.
+                </p>
+            </div>
+
+            <div id="hippocamp">
+                <button onclick="myFunction()">Labels</button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                
+            </div>
+            <br></br>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("hippocamp");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
+
+            <h2 style="padding: 20px;">To be continued!</h2>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>My Dev Diaries</h3>
+                <p>Documenting my journey in web development</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:gracegibsonart@gmail.com" target="_blank">Email: gracegibsonart@gmail.com</a>
+                    <li><a href="https://gracecgibson.com/" target="_blank">Website: gracecgibson.com</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="font-size: 15px;">&copy; 2026 Grace Gibson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
