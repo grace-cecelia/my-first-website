@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -56,7 +59,7 @@
                     labels according to the user's preferences. This experiment involves creating a similar
                     switch to later implement in the final product.
                     <br></br>
-                    insert image of prototype switch here
+                    (insert image of prototype switch here)
                     <br></br>
                     I used code from W3 Tutorials to create a simple toggle switch, then added text based on code
                     recommended on Stack Overflow. I adjusted CSS elements to produce the appearance I wanted.
@@ -83,7 +86,6 @@
 
             <div class="container">
                 <div class="img-overlay-wrap">
-
                     <img src="../images/limbicStructures_001.png"
                         alt="isolated structures within the limbic lobe of the brain - hippocampus, amygdala, corpus callosum, fornix, and cingulate gyrus"
                         style="width: 400px;">
@@ -96,25 +98,12 @@
                 </div>
             </div>
 
-            <div class="learning-section">
-                <p>The next job was to connect the label appearing and disappearing with the toggle.
-                    <br></br>
-                    I brought in code from W3 that used HTML and JS to hide and show an element with a button. I
-                    experimented with adding this code to the items I had created. I wasn't able to immediately connect
-                    the label with the toggle, but I implemented JS to connect the hide/show function to the button code
-                    provided by W3.
-                    <br></br>
-                    I had some trouble getting this to work properly, as I couldn't figure out how to connect the button function to an item that wasn't a button.
-                </p>
-            </div>
-
             <div id="hippocamp">
                 <button onclick="myFunction()">Labels</button>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                
+                <label class="switch" onclick="myFunction()">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <br></br>
 
@@ -129,7 +118,91 @@
                 }
             </script>
 
+            <div class="learning-section">
+                <p>The next job was to connect the label appearing and disappearing with the toggle.
+                    <br></br>
+                    I brought in code from W3 that used HTML and JS to hide and show an element with a button. I
+                    experimented with adding this code to the items I had created. I wasn't able to immediately connect
+                    the label with the toggle, but I implemented JS to connect the hide/show function to the button code
+                    provided by W3.
+                    <br></br>
+                    I had some trouble getting this to work properly, as I couldn't figure out how to connect the button
+                    function to an item that wasn't a button.
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="img-overlay-wrap">
+                    <img src="../images/limbicStructures_001.png"
+                        alt="isolated structures within the limbic lobe of the brain - hippocampus, amygdala, corpus callosum, fornix, and cingulate gyrus"
+                        style="width: 400px;">
+                    <br></br>
+                    <div id="hippocamp2"> <svg xmlns="http://www.w3.org/2000/svg">
+                            <rect width="120" height="35" x="10" y="10" rx="10" ry="10" fill="white" stroke="black" />
+                        </svg>
+                        <div class="bottom-left">Hippocampus</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hippocamp2">
+                <toggle><button onclick="myFunction()">Labels</button></toggle>
+                <label class="switch" onclick="myFunction()">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <br></br>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("hippocamp2");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
+
+            <div class="learning-section">
+                <p>This approach wasn't working, so I decided to try a different way of creating a toggle and connecting
+                    functionality.
+                    <br></br>
+                    I used code from Stack Overflow to design a new button (rather than a slider - see below).
+                </p>
+            </div>
+
+            <div id='mybutton'>
+                <label for='mybutton-checkbox'>
+                    <input type=checkbox id='mybutton-checkbox'>
+                    <div class='side left'>25<i class="fa fa-user" aria-hidden="true"></i></div>
+                    <div class='side right'>100<i class="fa fa-user" aria-hidden="true"></i></div>
+                </label>
+            </div>
+            <br></br>
+
+            <div class="learning-section">
+                <p>The toggle didn't behave the way I wanted it, and I decided the tutorial I was following was too far
+                    from what I wanted to accomplish, so I took a new approach at creating a functional toggle without
+                    JS.
+                    <br></br>
+                    x
+                </p>
+            </div>
+
+            <input type="checkbox" role="switch">
+
+            <label for="ms1">My switch</label>
+            <input type="checkbox" role="switch" id="ms1" />
+
             <h2 style="padding: 20px;">To be continued!</h2>
+
+            <button id="toggleBtn">Show More</button>
+
+            <div id="extraContent" class="hidden">
+                <p>This is extra content!</p>
+            </div>
 
         </section>
     </main>
@@ -162,4 +235,6 @@
             <p style="font-size: 15px;">&copy; 2026 Grace Gibson. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
