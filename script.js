@@ -1,11 +1,13 @@
 console.log("connected")
 
-const button = document.querySelector("#toggleBtn");
-const content = document.querySelector("#extraContent");
+const hippocampToggle = document.querySelector("#hippocamp2-toggle");
+const hippocampLabel = document.querySelector("#hippocamp2-label");
 
-function toggleContent() {
-    content.classList.toggle("hidden");
+if (hippocampToggle && hippocampLabel) {
+    const syncHippocampLabel = () => {
+        hippocampLabel.classList.toggle("hidden", !hippocampToggle.checked);
+    };
+
+    hippocampToggle.addEventListener("change", syncHippocampLabel);
+    syncHippocampLabel();
 }
-
-button.addEventListener("click", toggleContent);
-

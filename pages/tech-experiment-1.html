@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2</title>
+    <title>Tech Experiment 1</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 
     <main>
         <section class="lab-header">
-            <h1>Tech Experiment: Interactive Design</h1>
+            <h1>Tech Experiment: Interactive Toggle</h1>
             <p class="lab-date">February 4, 2026</p>
         </section>
 
@@ -41,25 +41,19 @@
 
             <div class="learning-section">
                 <ul>
-                    <p>1. Build a few simple interactive items in HTML, CSS, and JS as preparation for both my MRP and
-                        interactive project.
+                    <p>1. Build an interactive switch to show and hide labels on an image.
                         <br></br>
-                        2. Learn to code a toggle that shows and hides labels on a click, a dark mode toggle, and a blur
-                        filter button.
-                        <br></br>
-                        3. Explore common development skills needed for interactive design for the web.
+                        2. Develop a more comprehensive understanding of how JS works in interactive design.
                     </p>
                 </ul>
             </div>
 
-            <h2 style="padding: 20px;">Part 1: Toggle for Labels</h2>
+            <h2 style="padding: 20px;">Background and First Steps</h2>
 
             <div class="learning-section">
                 <p>One element of my MRP is a build-your-own-surgery tool that uses a toggle switch to show and hide
                     labels according to the user's preferences. This experiment involves creating a similar
                     switch to later implement in the final product.
-                    <br></br>
-                    (insert image of prototype switch here)
                     <br></br>
                     I used code from W3 Tutorials to create a simple toggle switch, then added text based on code
                     recommended on Stack Overflow. I adjusted CSS elements to produce the appearance I wanted.
@@ -98,6 +92,7 @@
                 </div>
             </div>
 
+            <!--original button functional-->
             <div id="hippocamp">
                 <button onclick="myFunction()">Labels</button>
                 <label class="switch" onclick="myFunction()">
@@ -107,6 +102,7 @@
             </div>
             <br></br>
 
+            <!--button functionality functional-->
             <script>
                 function myFunction() {
                     var x = document.getElementById("hippocamp");
@@ -131,13 +127,15 @@
                 </p>
             </div>
 
+            <!--adding image and label-->
             <div class="container">
                 <div class="img-overlay-wrap">
                     <img src="../images/limbicStructures_001.png"
                         alt="isolated structures within the limbic lobe of the brain - hippocampus, amygdala, corpus callosum, fornix, and cingulate gyrus"
                         style="width: 400px;">
                     <br></br>
-                    <div id="hippocamp2"> <svg xmlns="http://www.w3.org/2000/svg">
+                    <div id="hippocamp2-label">
+                        <svg xmlns="http://www.w3.org/2000/svg">
                             <rect width="120" height="35" x="10" y="10" rx="10" ry="10" fill="white" stroke="black" />
                         </svg>
                         <div class="bottom-left">Hippocampus</div>
@@ -145,25 +143,15 @@
                 </div>
             </div>
 
-            <div id="hippocamp2">
-                <toggle><button onclick="myFunction()">Labels</button></toggle>
-                <label class="switch" onclick="myFunction()">
-                    <input type="checkbox">
+            <!--functional switch-->
+            <div class="label-toggle-wrap">
+                <span>Labels</span>
+                <label class="switch">
+                    <input type="checkbox" id="hippocamp2-toggle" checked>
                     <span class="slider round"></span>
                 </label>
             </div>
             <br></br>
-
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("hippocamp2");
-                    if (x.style.display === "none") {
-                        x.style.display = "block";
-                    } else {
-                        x.style.display = "none";
-                    }
-                }
-            </script>
 
             <div class="learning-section">
                 <p>This approach wasn't working, so I decided to try a different way of creating a toggle and connecting
@@ -185,9 +173,10 @@
             <div class="learning-section">
                 <p>The toggle didn't behave the way I wanted it, and I decided the tutorial I was following was too far
                     from what I wanted to accomplish, so I took a new approach at creating a functional toggle without
-                    JS.
+                    JS. My attempt at finishing this is below.
                     <br></br>
-                    x
+                    This was also not working how I wanted, so I consulted Shay for help with the functionality.
+                    Modifying the JS got it working, and now the toggle slider turns the label on and off (see above).
                 </p>
             </div>
 
@@ -195,13 +184,13 @@
 
             <label for="ms1">My switch</label>
             <input type="checkbox" role="switch" id="ms1" />
+            <br></br>
 
-            <h2 style="padding: 20px;">To be continued!</h2>
-
-            <button id="toggleBtn">Show More</button>
-
-            <div id="extraContent" class="hidden">
-                <p>This is extra content!</p>
+            <div class="learning-section">
+                <p>Having now had the lecture about JS in class, I feel better equipped to handle a task like this. Even
+                    though I required help to make an element work the way I wanted, this was a good learning
+                    experience, and I'll carry it forward as I keep working on interactive design.
+                </p>
             </div>
 
         </section>
@@ -235,6 +224,6 @@
             <p style="font-size: 15px;">&copy; 2026 Grace Gibson. All rights reserved.</p>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="../script.js"></script>
 </body>
