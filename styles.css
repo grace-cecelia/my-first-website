@@ -766,62 +766,44 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-/* Main 2-column layout */
-.scrolly-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-
-/* Left side (visual stage) */
-.visual-column {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100vh;
-    background: white;
-    padding: 24px;
-}
-
-
-
-/* Right side (story) */
-.text-column {
-    margin-left: 50%;
-    width: 50%;
-    padding: 24px;
-    background: #f3f3f3;
-}
-
-.visual-stack {
+.container {
     position: relative;
+    width: 50%;
+    align:center
+}
+
+.image {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    align: center
 }
 
-
-/* Each visual sits on top of each other */
-.visual {
+.overlay {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0;
-    transition: opacity 0.7s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: .5s ease;
+    background-color: #83aca7;
 }
 
-
-/* The active one shows */
-.visual.active {
+.container:hover .overlay {
     opacity: 1;
 }
 
-
-.visual img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }

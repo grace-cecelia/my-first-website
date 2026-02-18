@@ -2,53 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab 4 - Scrollytelling</title>
-
-
-    <!-- Connect CSS -->
-    <link rel="stylesheet" href="../styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
-    <div class="scrolly-container">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Dev Diaries</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- LEFT: visuals -->
-        <div class="visual-column">
-            <div class="visual-stack">
+    <main>
+        <section class="lab-header">
+            <h1>Lab 4</h1>
+            <p class="lab-date">February 12, 2026</p>
+        </section>
 
-                <div class="visual active" id="visual-1">
-                    <img src="../images/Step1.jpg" alt="Step 1" />
+        <section class="lab-content">
+            <h2 style="padding: 20px;">Description</h2>
+
+            <div class="learning-section">
+                <ul>
+                    <p>The purpose of this lab was to learn simple techniques for scrollytelling. As practice for our
+                        interactive project, I wanted to add the additional step of making the scrollytelly appear as an
+                        overlay over the main lab page. This functionality is still in progress!
+                    </p>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="./lab4/lab4scrollytelly.html">
+                <img src="../pages/lab4/assets/Step1.jpg" alt="Step 1" width="500px" />
+                <div class="overlay">
+                    <div class="text">
+                        <h2>Click to open scrollytelly!</h2>
+                    </div>
                 </div>
+            </a>
+        </div>
 
-                <div class="visual" id="visual-2">
-                    <img src="../images/Step2.jpg" alt="Step 2" />
-                </div>
+    </main>
 
-                <div class="visual" id="visual-3">
-                    <img src="../images/Step3.jpg" alt="Step 3" />
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>My Dev Diaries</h3>
+                <p>Documenting my journey in web development</p>
             </div>
 
-            <!-- RIGHT: story text -->
-            <div class="text-column">
-                <h2>Story Column</h2>
-                <p>Scroll text will go here.</p>
-                <p>To test scrolling, we need more content...</p>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
 
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Lorem ipsum dolor sit amet...</p>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:gracegibsonart@gmail.com" target="_blank">Email: gracegibsonart@gmail.com</a>
+                    <li><a href="https://gracecgibson.com/" target="_blank">Website: gracecgibson.com</a>
+                </ul>
             </div>
         </div>
 
-        <!-- Connect JS -->
-        <script src="script.js"></script>
+        <div class="footer-bottom">
+            <p style="font-size: 15px;">&copy; 2026 Grace Gibson. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
